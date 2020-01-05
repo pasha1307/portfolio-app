@@ -1,1 +1,1 @@
-# AngularJS Greensock Anumation WebApp
+# AngularJS Greensock Animation WebApp

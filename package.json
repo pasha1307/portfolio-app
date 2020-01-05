@@ -1,0 +1,9 @@
+{
+  "name": "Pavel Krotov Portfolio Web Projects",
+  "version": "0.0.0.1",
+  "devDependencies": {
+    "karma": "0.8.4",
+    "chai": "1.6.0",
+    "http-server": "0.5.3"
+  }
+}

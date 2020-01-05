@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="AngularPortfolio" ng-controller="AppCtrl">
+<head>
+  <title>Portfolio: Pavel Krotov</title>
+  <link rel="stylesheet" type="text/css" href="./lib/gumby-css/css/gumby.css" />
+  <link rel="stylesheet" type="text/css" href="./lib/animate.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/app.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/animations.css" />
+</head>
+<body app-scroll>
+  <main id="wrapper">
+    <header>
+      <div class="website-header">
+        <div class="row">
+          <h1>Pavel Krotov's Portfolio</h1>
+          <nav class="">
+            <a href="https://github.com/pasha1307/" target="_blank" rel="nofollow" class="btn info medium">
+              <i class="icon-github icon-left"></i> View Github Repos
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="navbar nav1 website-nav">
+        <nav class="row">
+          <form class="search-website-form field">
+            <input type="search" placeholder="Search for Websites..." class="search input" ng-model="q" ng-change="search(q)" />
+          </form>
+          <ul class="toggles">
+            <li>
+              <a href="#/?q=all" ng-class="{on:q=='all'}">All</a>
+            </li>
+            <li>
+              <a href="#/?q=website" ng-class="{on:q=='website'}">Websites</a>
+            </li>
+            <li>
+              <a href="#/?q=webapps" ng-class="{on:q=='webapps'}">Apps</a>
+            </li>
+            <li>
+              <a href="#/?q=graphic" ng-class="{on:q=='graphic'}">Graphics</a>
+            </li>
+            <li>
+              <a href="#/?q=photo" ng-class="{on:q=='photo'}">Photos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="content">
+      <div ng-view id="view"></div>
+    </div>
+  </main>
+  <footer class="navbar nav1">
+    <div class="row">
+      <div class="inner">
+        <div class="yearofmoo">
+          <a href="http://www.pavelkrotov.com/" target="_blank" class="btn info">
+            <i class="icon-cloud"></i> www.pavelkrotov.com
+          </a>
+        </div>
+        <nav>
+          <a href="mailto:pavel@krotov.us?subject=Pavel%20Krotov%20Resume" class="btn info medium">
+            <i class="icon-mail icon-left"></i> Email me
+          </a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.9.7/TweenMax.min.js"></script>
+  <script type="text/javascript" src="./lib/lunr.js"></script>
+  <script type="text/javascript" src="./db/data.js"></script>
+  <script type="text/javascript" src="./scripts/animations.js"></script>
+  <script type="text/javascript" src="./scripts/search.js"></script>
+  <script type="text/javascript" src="./scripts/app.js"></script>
+</body>
+</html>
